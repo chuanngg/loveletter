@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css" id="base-style">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="proposal-container">
+        <img src="Images/bubu-rose-bubu-sweet.gif">
+        <h1>这束花是送给云辉的。</h1>
+        <div class="button-container">
+            <button class="yes-btn-proposal">Yes</button>
+            <button class="no-btn-proposal">No</button>
+        </div>
+    </div>
+    <script>
+        // Select the buttons
+        const yesButton = document.querySelector('.yes-btn-proposal');
+        const noButton = document.querySelector('.no-btn-proposal');
+
+        function handleYesButton() {
+            window.location.href = 'petition.html'; // Redirect to petition.html on "Yes"
+        }
+
+        function handleNoButton(event) {
+            const button = event.target;
+            const container = button.parentElement.parentElement;
+            const containerRect = container.getBoundingClientRect();
+
+            const newX = Math.random() * (containerRect.width - button.offsetWidth);
+            const newY = Math.random() * (containerRect.height - button.offsetHeight);
+
+            button.style.position = 'absolute';
+            button.style.left = `${newX}px`;
+            button.style.top = `${newY}px`;
+        }
+
+        // Attach event listeners
+        yesButton.addEventListener('click', handleYesButton);
+        noButton.addEventListener('click', handleNoButton);
+    </script>
+</body>
+</html>

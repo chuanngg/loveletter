@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>声明函</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Alex+Brush&family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            overflow: auto; /* Enable scrolling */
+            height: auto; /* Allow content height to grow */
+        }
+        .signature-box input[type="text"] {
+            width: 80%; /* Width of the signature input field */
+            padding: 10px; /* Padding inside the signature input */
+            border: none; /* Remove borders */
+            border-bottom: 2px solid #ccc; /* Bottom border for the signature input */
+            font-size: 50px; /* Larger font size for the signature */
+            font-family: "Alex Brush", cursive;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center; /* Center-align the text in the signature input */
+        }
+        input.finalized {
+        background-color: transparent; /* Remove background */
+        color: #333; /* Match text color with document */
+        border: none !important; /* Forcefully remove border */
+        outline: none !important; /* Forcefully remove outline */
+        font-size: 16px; /* Match the document's font size */
+        font-family: inherit; /* Inherit the font from the surrounding text */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+        width: 100%; /* Ensure the input takes the full width of its container */
+        box-sizing: border-box; /* Ensure padding and border are included in the width */
+        display: inline-block; /* Display inline but allow width to be controlled */
+        }
+
+        input.finalized:focus {
+        border: none !important; /* Remove border on focus */
+        outline: none !important; /* Remove outline on focus */
+        }
+    </style>
+</head>
+<body>
+    <div class="petition-container">
+        <img src="Images/National_emblem_of_Indonesia_Garuda_Pancasila.svg.webp" alt="">
+        <h2>声明函</h2>
+        <p>下列签字人：本人</p>
+
+        <label for="nama">名字：</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="ttl">出生地点及日期：</label>
+        <input type="text" id="ttl" name="ttl" required>
+
+        <label for="umur">年龄：</label>
+        <input type="text" id="umur" name="umur" required>
+
+        <label for="jenis-kelamin">性别：</label>
+        <input type="text" id="jenis-kelamin" name="jenis-kelamin" required>
+
+        <label for="pendidikan">学历：</label>
+        <input type="text" id="pendidikan" name="pendidikan" required>
+
+        <label for="status-perkawinan">婚姻状况：</label>
+        <input type="text" id="status-perkawinan" name="status-perkawinan" required>
+
+        <label for="agama">宗教：</label>
+        <input type="text" id="agama" name="agama" required>
+
+        <label for="alamat">地址：</label>
+        <input type="text" id="alamat" name="alamat" required>
+
+        <p>兹声明，我:</p>
+        <ol>
+            <li>我是 Nicholas Louise Chuang，我要郑重声明：你真的很可爱。</li>
+            <li>别停下你的可爱哦。</li>
+        </ol>
+
+        <p>我已经没什么想说的了，因为你太可爱、太漂亮了，让我都说不出话来了，哈哈。</p>
+
+        <div class="date-location">
+            <div class="text-container">
+                <p>Medan, 22 January 2026</p>
+                <p>声明人本人：</p>
+                <p>[MATERAI Rp10.000,-]</p>
+            </div>
+            <div class="left-image">
+                <img src="Images/materai.png" alt="Materai" class="left-image">
+            </div>
+        </div>
+
+        <div class="signature-box">
+            <input type="text" id="signature" name="signature" placeholder="请在此签名…" required>
+            <!-- Button placeholder -->
+            <button type="button" class="finalize-btn" onclick="finalizeDocument()">Submit</button>
+        </div>
+    </div>
+    
+    <script>
+        function finalizeDocument() {
+    const inputs = document.querySelectorAll('#nama, #ttl, #umur, #jenis-kelamin, #pendidikan, #status-perkawinan, #agama, #alamat, #signature');
+
+    inputs.forEach(input => {
+        input.setAttribute('readonly', true);
+        input.classList.add('finalized');
+    });
+
+    const button = document.querySelector('.finalize-btn');
+    button.textContent = "Next"; // Change the button text to "Next"
+    button.onclick = function() {
+        window.location.href = 'final.html'; // Redirect to final.html
+    };
+}
+    </script>
+      <audio autoplay>
+        <source src="Music/RNB.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>  
+</body>
+</html>

@@ -1,0 +1,605 @@
+body {
+    background :#fae1dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Ensure there is no margin around the body */
+    padding: 0; /* Remove padding to avoid overflow issues */
+    overflow: hidden; /* Disable scrolling */
+    font-family: "Alegreya", serif;
+}
+
+
+/* Index html style */
+.container-index {
+    max-width: 400px;
+    width: 100%;
+    background-image: url(Images/pinktexture.jpg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container-index h1{
+    text-align: center;
+}
+
+img.profile-pic {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px; /* Add some space below the image */
+    object-fit: cover;
+}
+
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align form elements */
+}
+
+form label {
+    width: 100%;
+    max-width: 300px; /* Ensure elements do not get too wide */
+    text-align: left; /* Align labels to the left */
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold;
+    color: #333;
+}
+
+form input {
+    width: 100%;
+    max-width: 300px; /* Ensure elements do not get too wide */
+    padding: 10px;
+    margin-bottom: 15px; /* Add space between elements */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the space between buttons */
+}
+
+.index-sign-in-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(135deg, #b48811, #bb9b49);
+    color: white;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.index-sign-in-btn:hover {
+    background: linear-gradient(135deg, #b48811, #a2790d);
+}
+
+/* QUIZ HTML STYLE*/
+.quiz-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 600px; /* Adjust as needed to accommodate GIFs */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure no overflow */
+    border-radius: 20px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visual */
+    background: white; /* Optional: Add background color for better visual */
+}
+
+.yes-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(135deg, #b48811, #bb9b49);
+    color: white;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.yes-btn:hover {
+    background: linear-gradient(135deg, #b48811, #a2790d);
+}
+
+.no-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(135deg, #b48811, #bb9b49);
+    color: white;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.no-btn:hover {
+    background: linear-gradient(135deg, #b48811, #a2790d);
+}
+
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%; /* Ensure each card takes full height of container */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url(Images/pinktexture.jpg);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-align: center; /* Center the content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    max-width: 100%; /* Ensure the image doesn't exceed the card width */
+    max-height: 200px; /* Set a fixed maximum height for all images */
+    margin-bottom: 20px; /* Space between the GIF and the question */
+}
+
+.card1 {
+    z-index: 10;
+}
+
+.card2 {
+    z-index: 9;
+}
+
+.card3 {
+    z-index: 8;
+}
+
+.card4 {
+    z-index: 7;
+}
+
+.card5 {
+    z-index: 6;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}   
+
+.card13 {
+    background-image: url(Images/pinktexture.jpg);
+}
+
+.card13 img {
+    max-height: 150px; /* Adjust the size of the congratulatory image */
+}
+
+.card13 h2 {
+    font-size: 2em;
+    color: #ff4d4d;
+}
+
+.card13 p {
+    font-size: 1.2em;
+    font-weight: bold; /* Add font-weight for the paragraph */
+    color: #333;
+}
+
+.continue-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(135deg, #ff4d4d, #ff6666);
+    color: white;
+    border-radius: 25px;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+.continue-btn:hover {
+    background: linear-gradient(135deg, #ff6666, #ff4d4d);
+}
+
+
+/*LETTER HTML STYLE */
+
+.letter-box {
+    background: #fffbe0;
+    padding: 60px 60px;
+    color: #fff;
+    width: 50%;
+    text-align: center;
+    margin: 25vh auto;
+    position: relative;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+}
+
+.letter-box h3{
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 5px;
+    color: #333;
+}
+
+.letter-box p{
+    color: #333;
+    line-height: 1.5;
+    font-size: 17px;
+}
+
+.top-border:before{
+    content: '';
+    width: 71px;
+    height: 71px;
+    position: absolute;
+    background: url(Images/thin-line-vintage-corner-medieval-period-of-the-victorian-dynasty-fancy-black-monogram-frame-design-element-abstract-icon-collection-flower-simple-symbol-vector-modified.png);
+    background-size: cover;
+    top: 20px;
+    left: 20px;
+    transform: rotate(270deg);
+}
+
+.top-border:after{
+    content: '';
+    width: 71px;
+    height: 71px;
+    position: absolute;
+    background: url(Images/thin-line-vintage-corner-medieval-period-of-the-victorian-dynasty-fancy-black-monogram-frame-design-element-abstract-icon-collection-flower-simple-symbol-vector-modified.png);
+    background-size: cover;
+    top: 20px;
+    right: 20px;
+   
+}
+.bottom-border:before{
+    content: '';
+    width: 71px;
+    height: 71px;
+    position: absolute;
+    background: url(Images/thin-line-vintage-corner-medieval-period-of-the-victorian-dynasty-fancy-black-monogram-frame-design-element-abstract-icon-collection-flower-simple-symbol-vector-modified.png);
+    background-size: cover;
+    bottom: 20px;
+    left: 20px;
+    transform: rotate(180deg);
+} 
+
+.bottom-border:after{
+    content: '';
+    width: 71px;
+    height: 71px;
+    position: absolute;
+    background: url(Images/thin-line-vintage-corner-medieval-period-of-the-victorian-dynasty-fancy-black-monogram-frame-design-element-abstract-icon-collection-flower-simple-symbol-vector-modified.png);
+    background-size: cover;
+    bottom: 20px;
+    right: 20px;
+    transform: rotate(90deg);
+} 
+
+.letter-box img{
+    width: 100px;
+}
+.love2{
+    animation: pulse 1s ease infinite;
+    display: inline-block;
+    color: #00bdd6;
+}
+
+@keyframes pulse{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.3);}
+    100%{transform: scale(1);}
+}
+
+.continue-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(135deg, #b48811, #bb9b49);
+    color: white;
+    border-radius: 25px;
+    transition: background 0.3s;
+    margin-top: 40px; /* Adjust this value to increase the space above the button */
+}
+
+.continue-button {
+    background: linear-gradient(135deg, #b48811, #a2790d);
+}
+
+
+
+
+/* Envelope HTML STYLE */
+
+.envelope-container{
+    position: relative
+}
+
+.love {
+    position: relative;
+    top: 50px;
+    cursor: pointer;
+    animation: up 3s linear infinite;
+}
+
+.envelope{
+    position: relative;
+    width: 300px ;
+    height: 200px;
+    background: #f08080;
+    display: grid;
+    place-items: center;
+}
+
+.envelope::before{
+    content:'';
+    position: absolute;
+    width: 212px;
+    height: 212px;
+    background: #f08080;
+    transform: rotate(45deg);
+    top: -105px;
+    left: 44px;
+    border-radius: 30px 0 0 0;
+}
+
+.front{
+    position: absolute;
+    border-right: 180px solid #f4978e;
+    border-top: 95px solid transparent;
+    border-bottom: 100px solid transparent;
+    left: 120px;
+    top: 5px;
+    width: 0;
+    height: 0;
+    z-index: 10;
+}
+.front::before{
+    position: absolute;
+    content:'';
+    border-left: 300px solid #fda996 ;
+    border-top: 195px solid transparent;
+    left: -120px;
+    top: -95px;
+}
+.cardz{
+    position: relative;
+    width: 250px;
+    height: 180px;
+    background: #fffbe0;
+    border-radius: 2px;
+    display: grid;
+    place-items: center;
+    transition: 1s;
+}
+.cardz::before{
+    content:'';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px solid #003049;
+    border-style: dashed
+}
+
+.love:hover .cardz{
+    transform: translateY(-100px);
+}
+
+.cardz .heart{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background: #00bdd6;
+    bottom: 20px;
+    transform: rotate(45deg);
+    border-radius: 50% 0 0 50%;
+}
+.cardz .heart::before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00bdd6;
+    border-radius: 0 50% 50% 0;
+    right: 0;
+    transform: rotate(-90deg);
+    transform-origin: top;
+}
+
+.cardz .heart::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00bdd6;
+    right: -18px;
+}
+@keyFrames up{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+}
+
+.love::before{
+    content: '';
+    position: absolute;
+    width: 330px;
+    height: 25px;
+    border-radius: 50%;
+    background:  rgba(0,0,0,.3);
+    top: 265px;
+    left: -15px;
+    animation: scale 3s linear infinite;
+}
+
+@keyframes scale{
+    0%, 100%{
+        transform: scaleX(1);
+    }
+    50%{
+        transform: scaleX(.85);
+    }
+    
+}
+
+/* Petition HTML */
+.petition-container {
+    max-width: 800px; /* Maximum width of the document */
+    margin: 50px auto; /* Center the document horizontally */
+    padding: 40px; /* Padding inside the document */
+    background: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow around the document */
+    font-family: 'Times New Roman', Times, serif; /* Classic serif font */
+    line-height: 1.6; /* Line height for readability */
+    color: #333; /* Dark gray text color */
+}
+.petition-container img {
+    display: block; /* Make the image a block element */
+    margin: 0 auto 20px auto; /* Center the image horizontally and add some space below */
+    max-width: 300px; /* Set a max width for the image */
+}
+
+.petition-container h2 {
+    text-align: center; /* Center-align the title */
+    font-size: 24px; /* Font size for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.petition-container label {
+    font-size: 16px; /* Font size for labels */
+    margin-bottom: 5px; /* Space below each label */
+    display: block; /* Display each label as a block */
+    font-weight: bold; /* Bold text for labels */
+}
+
+.petition-container input[type="text"] {
+    width: 30%; /* Full width input fields */
+    padding: 10px; /* Padding inside the input fields */
+    margin-bottom: 15px; /* Space below each input field */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners for input fields */
+    font-family: "Alegreya", serif;
+    font-size: 16px; /* Adjust font size if necessary */
+    color: #333; /* Match the text color to the body */
+}
+
+.petition-container p {
+    margin: 20px 0; /* Vertical spacing for paragraphs */
+}
+
+.petition-container ol {
+    margin-left: 20px; /* Indent the ordered list */
+}
+
+.signature-box {
+    margin-top: 30px; /* Space above the signature box */
+    text-align: center; /* Center-align the signature box */
+}
+
+
+.date-location {
+    margin-top: 40px;
+    text-align: right;
+}
+
+.text-container {
+    text-align: right;
+}
+
+.left-image {
+    display: block; /* Make sure the image is treated as a block element */
+    margin: 5px 0 0 auto; /* Align the image to the right and add some space above */
+    width: 200px;
+    height: 200px;
+}
+
+
+.finalize-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background: #af4c4c;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.finalize-btn:hover {
+    background: #a04545;
+}
+
+.finalize-btn:disabled {
+    background-color: #999; /* Gray out the button */
+    cursor: not-allowed; /* Change the cursor to not-allowed */
+}
+
+/* PROPOSAL HTML */
+.proposal-container {
+    position: relative;
+    text-align: center;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white to make the text pop */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 100px auto; /* Center the container */
+}
+
+.proposal-container h1 {
+    font-family: 'Alegreya', serif;
+    font-size: 32px;
+    color: #ff4d4d; /* Romantic red color */
+    margin-bottom: 30px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.yes-btn-proposal, .no-btn-proposal {
+    font-family: 'Alegreya', serif;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.yes-btn-proposal {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.yes-btn-proposal:hover {
+    background-color: #ff6666;
+}
+
+.no-btn-proposal {
+    background-color: #dddddd;
+    color: #333;
+}
+
+.no-btn-proposal:hover {
+    background-color: #cccccc;
+}
